@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watchwave login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="assets/image/login_bg.jpg" >
+</head>
+<body>
+    <nav>
+        <a href="#"></a>
+    </nav>
+    <div class="form-wrapper">
+        <h2>Sign in</h2>
+        <form action="#" id="model-login">
+            <div class="form-control">
+                <input type="email" id="signup-email" required>
+                <label for="signup-email">Email</label>
+            </div>
+            <div class="form-control">
+                <input type="password" id="signup-pass" required>
+                <label for="signup-pass">Password</label>
+            </div>
+            <button type="submit" id="login_submit">Sign In</button>
+            <div class="form-help"> 
+                <div class="remember-me">
+                    
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+        </form>
+        <p>New to watchwave <a href="register.html">Sign up now</a></p>
+        <small>
+            This page is protected by Google reCAPTCHA to ensure you're not a bot. 
+            <a href="#">Learn more.</a>
+        </small>
+    </div>
+
+    <!--  -->
+    <!-- firestore -->
+    <script type="module" src="script/login_auth.js"></script>
+    <!--  -->
+    <script src="script/login.js"></script>
+</body>
+</html>

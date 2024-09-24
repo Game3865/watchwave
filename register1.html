@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watchwave reg Page</title>
+    <link rel="stylesheet" href="reg.css">
+    <link rel="icon" href="1000104416-01.jpeg.jpg">
+</head>
+
+<body>
+    <nav>
+        <a href="#"></a>
+    </nav>
+    <div class="form-wrapper">
+        <h2>Sign Up</h2>
+        <form action="#" id="model-reg">
+            <label for="signup-name" style="font-size: 15px; color: aliceblue;">Name</label>
+            <div class="form-control">
+                <input type="text" id="signup-name" required placeholder="Name">
+            </div>
+            <div class="form-control">
+                <input type="email" id="signup-email" required placeholder="Email">
+            </div>
+            <div class="form-control">
+                <input type="number" id="signup-phone" required placeholder="number">
+            </div>
+            <div class="form-control">
+                <input type="password" id="signup-pass" required placeholder="Password">
+            </div>
+            <div class="form-control">
+                <input type="password" id="signup-Cpass" required placeholder="Confirm Password">
+            </div>
+
+            <button type="submit" id="reg_submit">Sign Up</button>
+            <div class="form-help">
+                <div class="remember-me">
+
+                </div>
+                <a href="#">Need help?</a>
+            </div>
+        </form>
+        <p>New to watchwave <a href="login.html">Sign in now</a></p>
+        <small>
+            This page is protected by Google reCAPTCHA to ensure you're not a bot.
+            <a href="#">Learn more.</a>
+        </small>
+    </div>
+
+    <!--  -->
+    <!-- firestore -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script type="module" src="script/reg_auth1.js"></script>
+    <!--  -->
+    <script src="script/login.js"></script>
+</body>
+
+</html>
