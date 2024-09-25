@@ -51,6 +51,7 @@ function submitform(e){
             // Signed up 
             const user = userCredential.user;
             saveuser(name, email, phone, password, confirmpass);
+            window.location.herf = "./index.html";
         })
         .catch((error) => {
             const errorCode = error.code;
