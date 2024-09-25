@@ -51,7 +51,8 @@ function submitform(e){
             // Signed up 
             const user = userCredential.user;
             saveuser(name, email, phone, password, confirmpass);
-            window.location.href = "./index.html";
+            alert("User created successfully");
+            window.location.href = "index.html";
         })
         .catch((error) => {
             const errorCode = error.code;
