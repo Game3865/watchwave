@@ -52,7 +52,7 @@ function submitform(e){
             const user = userCredential.user;
             saveuser(name, email, phone, password, confirmpass);
             alert("User created successfully");
-            window.location.href = "https://game3865.github.io/watchwave/index.html";
+            //window.location.href = "https://game3865.github.io/watchwave/index.html";
         })
         .catch((error) => {
             const errorCode = error.code;
