@@ -49,6 +49,7 @@ function submitform(e){
             const user = userCredential.user;
             saveuser(name, email, phone, password, confirmpass);
             alert("User created successfully");
+             window.location.href = "index.html";
             // window.location.href = "index.html";
         })
         .catch((error) => {
