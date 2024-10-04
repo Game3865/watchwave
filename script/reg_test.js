@@ -78,8 +78,8 @@ console.log(db);
 
 
 // function to save user    
-const  saveuser = async(name, email, phone, password, confirmpass) => {
-    const docRef = await addDoc(collection(db, "users/"), {
+const  saveuser = (name, email, phone, password, confirmpass) => {
+    const docRef = addDoc(collection(db, "users/"), {
         name: name,
         email: email,
         phone: phone,
