@@ -48,9 +48,7 @@ function submitform(e){
             // Signed up 
             const user = userCredential.user;
             saveuser(name, email, phone, password, confirmpass);
-            alert("User created successfully");
-             window.location.href = "index.html";
-            // window.location.href = "index.html";
+            alert("User created successfully");            // 
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -95,6 +93,7 @@ const  saveuser = (name, email, phone, password, confirmpass) => {
         //     zip: "12345"
         // }
     });
+     window.location.href = "index.html";
     console.log("good");
 };
 
