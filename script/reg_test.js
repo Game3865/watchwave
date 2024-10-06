@@ -47,8 +47,22 @@ function submitform(e){
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
-            saveuser(name, email, phone, password, confirmpass);
-            alert("User created successfully");            // 
+            const userData = {
+                name: name,
+                email: email,
+                phone: phone,
+                password: password,
+                confirmpass: confirmpass,
+            };
+            const docRef = doc(db , "users/" + user.uid);
+            setDoc(docRef, userData)
+            .then(() => {
+                window.location.href = "../stpage.html";
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });           // 
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -57,7 +71,7 @@ function submitform(e){
             // ..
         });
         
-    document.getElementById('model-reg').reset();
+    // document.getElementById('model-reg').reset();
 }
 
 console.log(db);
