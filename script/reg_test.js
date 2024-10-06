@@ -62,7 +62,7 @@ function submitform(e){
             .catch((error) => {
                 const errorMessage = error.message;
                 alert(errorMessage);
-            });           // 
+            });  
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -71,7 +71,7 @@ function submitform(e){
             // ..
         });
         
-    // document.getElementById('model-reg').reset();
+     document.getElementById('model-reg').reset();
 }
 
 console.log(db);
