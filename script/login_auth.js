@@ -38,6 +38,7 @@ login_submit.addEventListener('click', function (event) {
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
+            localStorage.setItem('user' , user.uid);
             window.location.href = "index.html";
             // ...
         })
