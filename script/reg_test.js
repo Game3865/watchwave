@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
-import { getFirestore , setdoc, doc ,collection} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+import { getFirestore , setDoc, doc ,collection} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
  // TODO: Add SDKs for Firebase products that you want to use
 
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -57,7 +57,7 @@ function submitform(e){
             const docRef = doc(db , "users/" + user.uid);
             setDoc(docRef, userData)
             .then(() => {
-                window.location.href = "../stpage.html";
+                window.location.href = "index.html";
             })
             .catch((error) => {
                 const errorMessage = error.message;
