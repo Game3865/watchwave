@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getAuth,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
- // TODO: Add SDKs for Firebase products that you want to use
+import { getFirestore, doc ,updateDoc} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,6 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 // link to the html
 const login_submit = document.getElementById('login_submit');
@@ -38,8 +40,18 @@ login_submit.addEventListener('click', function (event) {
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
-            localStorage.setItem('user' , user.uid);
-            window.location.href = "index.html";
+            const  docRef = doc(db, "users/" + user.uid);
+            updateDoc(docRef, {
+                logged: true,
+            }).then(() => {
+                // Document successfully updated!
+                console.log("Document successfully updated!");
+                localStorage.setItem('user' , user.uid);
+                window.location.href = "index.html";
+            }).catch((error) => {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
             // ...
         })
         .catch((error) => {
