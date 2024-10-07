@@ -53,6 +53,7 @@ function submitform(e){
                 phone: phone,
                 password: password,
                 confirmpass: confirmpass,
+                logged : false,
             };
             const docRef = doc(db , "users/" + user.uid);
             setDoc(docRef, userData)
