@@ -58,7 +58,7 @@ onAuthStateChanged(auth, (user) => {
                 }
                 else {
                     // doc.data() will be undefined in this case
-                    console.log("No such document!");
+                    window.location.href = "login.html";
                 }
             })
             .catch((error) => {
