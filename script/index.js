@@ -66,7 +66,7 @@ onAuthStateChanged(auth, (user) => {
             });
     }else{
         window.location.href = "login.html";
-        
+        console.log("error");
     }
 })
 
