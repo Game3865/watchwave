@@ -58,14 +58,15 @@ onAuthStateChanged(auth, (user) => {
                 }
                 else {
                     // doc.data() will be undefined in this case
-                    window.location.href = "login.html";
+                    console.log("No such document!");
                 }
             })
             .catch((error) => {
                 console.log("Error getting document:", error);
             });
     }else{
-        console.log("No user found in database.");
+        window.location.href = "login.html";
+        
     }
 })
 
